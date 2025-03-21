@@ -57,15 +57,16 @@ The application uses a sophisticated approach to determine the next step in an i
 4. **Deterministic Classification**: The evaluation uses Gemini 2.0 Flash with temperature=0.2 to ensure consistent and deterministic classification results.
 
 
-1. **Irrelevant Response Handling**:
+1. **Irrelevant Response and handling typos and ambiguous answers**:
+   - The LLM intelligently handles typos and ambiguous answers
    - When the LLM returns "IRRELEVANT", the system keeps the user on the current node
    - The next response includes a flag to politely redirect the conversation back to the intended topic
 
-2. **Edge Matching**:
+3. **Edge Matching**:
    - When the LLM identifies a matching condition, it returns the number of that condition
    - The system navigates to the target node specified by the matching edge
 
-3. **Fallback Mechanism**:
+4. **Fallback Mechanism**:
    - If the LLM response can't be parsed as a valid condition number, the system defaults to the first edge
    - If no edges exist, the system remains on the current node
 
