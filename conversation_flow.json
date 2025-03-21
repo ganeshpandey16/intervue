@@ -1,0 +1,97 @@
+[
+    {
+        "nodeId": "node1",
+        "rootNode": true,
+        "prompt": "Introduce yourself and ask if the user is Ganesh",
+        "edges": [
+            {
+                "condition": "user is Ganesh",
+                "targetNodeId": "node2"
+            },
+            {
+                "condition": "user is not Ganesh",
+                "targetNodeId": "node3"
+            }
+        ]
+    },
+    {
+        "nodeId": "node2",
+        "prompt": " Greet them warmly and ask if they're ready to begin the interview now.",
+        "edges": [
+            {
+                "condition": "user is ready to start the interview",
+                "targetNodeId": "node4"
+            },
+            {
+                "condition": "User is not ready to start the interview",
+                "targetNodeId": "node5"
+            }
+        ]
+    },
+    {
+        "nodeId": "node3",
+        "prompt": "Apologize for the confusion, explain that you've reached the wrong candidate, and politely end the conversation.",
+        "disableSendButton": true,
+        "edges": []
+    },
+    {
+        "nodeId": "node4",
+        "prompt": "User is ready to begin the Frontend Developer interview. Express enthusiasm and ask about closures in JavaScript, requesting an explanation with an example.",
+        "edges": [
+            {
+                "condition": "user provides a correct or adequate explanation of closures",
+                "targetNodeId": "node6"
+            },
+            {
+                "condition": "user provides an incorrect explanation or says they don't know",
+                "targetNodeId": "node7"
+            }
+        ]
+    },
+    {
+        "nodeId": "node5",
+        "prompt": "User is not ready to start the interview at this time. Express understanding about the timing, apologize for the interruption, thank them for their time, and mention that you'll reach out to reschedule.",
+        "disableSendButton": true,
+        "edges": []
+    },
+    {
+        "nodeId": "node6",
+        "prompt": "User has provided a correct explanation of closures in JavaScript. Compliment their understanding and ask about the difference between == and === operators in JavaScript.",
+        "edges": [
+            {
+                "condition": "user provides a correct explanation of == vs ===",
+                "targetNodeId": "node8"
+            },
+            {
+                "condition": "user provides an incorrect explanation or doesn't know",
+                "targetNodeId": "node9"
+            }
+        ]
+    },
+    {
+        "nodeId": "node7",
+        "prompt": "User has provided an incorrect explanation of closures or indicated they don't know. Thank them for their response, and ask about the difference between == and === operators in JavaScript.",
+        "edges": [
+            {
+                "condition": "user provides a correct explanation of == vs ===",
+                "targetNodeId": "node8"
+            },
+            {
+                "condition": "user provides an incorrect explanation or doesn't know",
+                "targetNodeId": "node9"
+            }
+        ]
+    },
+    {
+        "nodeId": "node8",
+        "prompt": "User has provided a correct explanation of == vs === operators. Compliment them on their JavaScript knowledge. Thank them for participating in the interview and inform them that you'll reach out if they're shortlisted for the next round. Wish them well.",
+        "disableSendButton": true,
+        "edges": []
+    },
+    {
+        "nodeId": "node9",
+        "prompt": "User has provided an incorrect explanation of == vs === operators. Thank them for their time and effort during the interview. Let them know that the team will review their interview and reach out if they proceed to the next round. End on a positive note.",
+        "disableSendButton": true,
+        "edges": []
+    }
+] 
