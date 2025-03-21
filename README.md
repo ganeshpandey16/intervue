@@ -54,7 +54,7 @@ The application uses a sophisticated approach to determine the next step in an i
    - Relevant to the conversation context
    - Aligned with any of the predefined edge conditions
 
-4. **Deterministic Classification**: The evaluation uses Gemini 1.5 Flash with temperature=0 to ensure consistent and deterministic classification results.
+4. **Deterministic Classification**: The evaluation uses Gemini 2.0 Flash with temperature=0.2 to ensure consistent and deterministic classification results.
 
 
 1. **Irrelevant Response Handling**:
