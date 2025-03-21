@@ -6,7 +6,7 @@ A structured interview chatbot powered by Google's Gemini LLM with a tree-based 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/ganeshpandey16/intervue
    cd <repository-directory>
    ```
 
@@ -33,7 +33,7 @@ A structured interview chatbot powered by Google's Gemini LLM with a tree-based 
    ```bash
    python app.py
    ```
-   - The application will run at `http://localhost:5000`
+   - The application will run at `http://localhost:8080`
 
 ## Design Choices
 
